@@ -1,0 +1,427 @@
+/* ------------------------ */
+/* Global */
+/* ------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    line-height: 1.8;
+}
+
+/* ------------------------ */
+/* Header */
+/* ------------------------ */
+
+.hero-image {
+    width: min(200px, 25vw);
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+header {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f0f6fc;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c9d1d9;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: #58a6ff;
+}
+
+/* ------------------------ */
+/* Hero */
+/* ------------------------ */
+
+.hero {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f0f6fc;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #8b949e;
+    max-width: 700px;
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 14px 28px;
+    background: #238636;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    background: #2ea043;
+}
+
+/* ------------------------ */
+/* Sections */
+/* ------------------------ */
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #f0f6fc;
+}
+
+/* ------------------------ */
+/* Cards */
+/* ------------------------ */
+
+.card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    color: #f0f6fc;
+}
+
+.card p {
+    color: #8b949e;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+/* ------------------------ */
+/* Contact */
+/* ------------------------ */
+
+#contact p {
+    margin-bottom: 16px;
+}
+
+#contact a {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#contact a:hover {
+    color: #79c0ff;
+}
+
+/* ------------------------ */
+/* Footer */
+/* ------------------------ */
+
+footer {
+    margin-top: 60px;
+    border-top: 1px solid #30363d;
+    text-align: center;
+    padding: 40px;
+    color: #8b949e;
+}
+
+/* ------------------------ */
+/* Responsive */
+/* ------------------------ */
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image {
+        width: min(140px, 40vw);
+    }
+}
+/* ------------------------ */
+/* Blog */
+/* ------------------------ */
+
+.blog-page {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.blog-intro {
+    color: #8b949e;
+    margin-bottom: 60px;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.blog-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #30363d;
+}
+
+.blog-item time {
+    color: #8b949e;
+    font-size: 0.95rem;
+}
+
+.blog-item a {
+    color: #f0f6fc;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.blog-item a:hover {
+    color: #58a6ff;
+}
+
+.blog-item p {
+    margin-top: 8px;
+    color: #8b949e;
+}
+
+@media (max-width: 768px) {
+
+    .blog-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+}
+/* ------------------------ */
+/* Blog Post */
+/* ------------------------ */
+
+.post {
+
+    max-width: 760px;
+    margin: auto;
+    padding: 80px 20px;
+
+}
+
+.post article {
+
+    width: 100%;
+
+}
+
+.post-date {
+
+    color: #8b949e;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+
+}
+
+.post-title {
+
+    font-size: 3rem;
+    line-height: 1.15;
+    color: #f0f6fc;
+    margin-bottom: 15px;
+
+}
+
+.post-image {
+    display: block;
+    width: 320px;         
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto;    
+    border-radius: 10px;
+}
+
+.post-subtitle {
+
+    color: #8b949e;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+
+}
+
+.post hr {
+
+    border: none;
+    border-top: 1px solid #30363d;
+    margin-bottom: 45px;
+
+}
+
+.post-content h2 {
+
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+.post-content p {
+
+    margin-bottom: 24px;
+    color: #d0d7de;
+    text-align: justify;
+
+}
+
+.post-content ul {
+
+    margin-left: 25px;
+    margin-bottom: 25px;
+
+}
+
+.post-content li {
+
+    margin-bottom: 10px;
+
+}
+
+.post-content blockquote {
+
+    margin: 30px 0;
+    padding-left: 20px;
+    border-left: 4px solid #58a6ff;
+    color: #8b949e;
+    font-style: italic;
+
+}
+
+.post-content img {
+
+    display: block;
+    max-width: 100%;
+    margin: 40px auto;
+    border-radius: 10px;
+
+}
+
+.post-content pre {
+
+    background: #161b22;
+    border: 1px solid #30363d;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 30px 0;
+
+}
+
+.post-content code {
+
+    font-family: "JetBrains Mono",
+                 "Fira Code",
+                 Consolas,
+                 monospace;
+
+}
+
+.post-content a {
+
+    color: #58a6ff;
+    text-decoration: none;
+
+}
+
+.post-content a:hover {
+
+    text-decoration: underline;
+
+}
+
+@media (max-width: 768px) {
+
+    .post-title {
+
+        font-size: 2.2rem;
+
+    }
+
+}
